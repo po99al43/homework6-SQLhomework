@@ -1,0 +1,26 @@
+create database moneylist default character set utf8;
+
+use moneylist
+
+drop table list;
+
+
+create table list(
+id int auto_increment primary key,
+item varchar(30),
+HowMuch int(10) default '0',
+data char(10)
+);
+
+insert list(item,HowMuch,data) 
+value('book',400,'2016-06-20'),
+('food',150,'2016-06-19'),
+('computer',25000,'2016-06-20'),
+('newPhone',20000,'2016-06-21');
+
+select * from list;
+
+update list set item = 'KFC',HowMuch = 500 where item like 'food';
+
+select * from list;
+
